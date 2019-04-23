@@ -1,0 +1,263 @@
+/*Font Imports*/
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
+/*Keyframes*/
+@-webkit-keyframes messagefade {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        top: -51px;
+    }
+}
+
+@-moz-keyframes messagefade {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        top: -51px;
+    }
+}
+
+@keyframes messagefade {
+    0% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0;
+        top: 0;
+    }
+    100% {
+        opacity: 0;
+        top: -51px;
+    }
+}
+
+@keyframes helptip {
+    0% {
+        margin: 0 0 0 0px;
+    }
+    10% {
+        margin: 0 0 0 -15px;
+    }
+    20% {
+        margin: 0 0 0 0px;
+    }
+    30% {
+        margin: 0 0 0 -15px;
+    }
+    40% {
+        margin: 0 0 0 0px;
+    }
+    50% {
+        margin: 0 0 0 -15px;
+    }
+    60% {
+        margin: 0 0 0 0px;
+    }
+    70% {
+        margin: 0 0 0 -15px;
+    }
+    80% {
+        margin: 0 0 0 0px;
+    }
+    90% {
+        margin: 0 0 0 -15px;
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        margin: 0 0 0 0px;
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes msg-animation {
+    80% {
+        opacity: 1;
+    }
+    99.99% {
+        opacity: 0;
+        height: auto;
+        visibility: visible;
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+    100%{
+        height: 0px;
+        margin: 0px;
+        padding: 0px;
+        visibility: hidden;
+    }
+}
+
+/* Didn't work, used transitions instead
+@keyframes modal-flow {
+    from {visibility: hidden;top:-100px;opacity: 0;}
+    to {visitbility: visible;top:0px;opacity:1;}
+}
+@-moz-keyframes modal-flow {
+    from {transform: scale(3.3) rotateX(60deg) translateY(-100%);}
+    to {transform: scale(1) rotateX(0deg) translateY(0%);}
+}*/
+/*END Keyframes*/
+
+/*Top Level Elements*/
+::selection {
+    background: rgba(9, 63, 59, 0.75);
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+html, body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: saddlebrown;
+    overflow-y: hidden;
+}
+
+a {
+    color: #FF5722;
+    text-decoration: underline;
+}
+
+b {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/*Container classes and whatnot*/
+.container {
+    width: 668px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+    display: block;
+}
+
+/*Now here's where the fun begins...*/
+.controller {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    margin-top: 30px !important;
+    margin-left: 0px !important;
+}
+
+.controller.half {
+    margin-top: 0px !important;
+}
+
+/*BEGIN PS4 White Controller Styling*/
+.controller.ds4.white {
+    background-image: url(https://svgur.com/i/CbA.svg);
+}
+
+.ds4.white.disconnected {
+    background: url(https://gamepadviewer.com/ps4-assets/disconnected.svgz);
+}
+
+.ds4.white .trigger {
+    background-image: url(https://gamepadviewer.com/ps4-white-assets/triggers.svgz);
+}
+
+.ds4.white .bumper {
+    background-image: url(https://gamepadviewer.com/ps4-white-assets/bumper.svgz);
+}
+
+.ds4.white .touchpad.pressed {
+    background-image: url(https://gamepadviewer.com/ps4-white-assets/touchpad.svgz);
+}
+
+.ds4.white .back, .ds4 .start {
+    background-image: url(https://gamepadviewer.com/ps4-white-assets/start.svgz);
+}
+
+.ds4.white .button {
+    background-image: url(https://svgur.com/i/C_a.svg);
+}
+
+.ds4.white .stick {
+    background-image: url(https://svgur.com/i/Cah.svg);
+}
+
+.ds4.white .face {
+    background-image: url(https://svgur.com/i/C__.svg);
+}
+
+/*END PS4 White Controller Styling*/
+
+.disconnected[id*=gamepad-] .plshalpme {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: darkred;
+}
+
+.disconnected[id*=gamepad-] .plshalpme div {
+    display: block;
+    /* margin: 0 auto; */
+    /* width: 238px; */
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: whitesmoke;
+    font-size: 68px;
+    left: 50%;
+}
+
+.disconnected[id*=gamepad-] .plshalpme a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+/*Generic Classes*/
+.active {
+    display: block;
+}
